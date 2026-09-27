@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palazhi Bakery — Artisanal Bakes & Traditional Flavours | Cherthala</title>
+  <meta name="description" content="Palazhi Bakery in Thirunelloor, Cherthala. Freshly baked Kerala puffs, tea snacks, butter cookies, authentic delicacies, and custom celebration treats.">
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar with Live Status -->
+  <aside class="top-bar">
+    <div class="wrap top-bar-inner">
+      <div class="status-indicator">
+        <span class="status-dot" id="status-dot"></span>
+        <span id="status-text">Checking hours...</span>
+      </div>
+      <div class="top-bar-links">
+        <span class="top-loc">📍 Thirunelloor, Cherthala, Alappuzha</span>
+        <a href="tel:8547317272" class="top-phone">📞 +91 85473 17272</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Glassmorphism Header -->
+  <header id="site-header">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-text">
+          <span class="brand-main">Palazhi <span class="brand-highlight">Bakery</span></span>
+          <span class="brand-malayalam">പാലാഴി ബേക്കറി</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav id="site-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#specialties">Specialties</a></li>
+          <li><a href="#menu">Our Menu</a></li>
+          <li><a href="#gallery">Kerala Delicacies</a></li>
+          <li><a href="#location">Find Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a class="nav-wa-btn" href="https://wa.me/918547317272" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.33C8.95 7.33 8.7 7.39 8.5 7.61C8.28 7.85 7.67 8.42 7.67 9.58C7.67 10.74 8.52 11.86 8.64 12.02C8.76 12.18 10.3 14.54 12.66 15.56C14.62 16.41 15.02 16.24 15.45 16.2C15.88 16.16 16.84 15.63 17.04 15.07C17.24 14.51 17.24 14.03 17.18 13.93C17.12 13.83 16.96 13.77 16.72 13.65C16.48 13.53 15.3 12.95 15.08 12.87C14.86 12.79 14.7 12.75 14.54 12.99C14.38 13.23 13.92 13.77 13.78 13.93C13.64 14.09 13.5 14.11 13.26 13.99C13.02 13.87 12.25 13.62 11.33 12.8C10.62 12.16 10.14 11.37 10 11.13C9.86 10.89 9.99 10.76 10.11 10.64C10.22 10.53 10.36 10.35 10.48 10.21C10.6 10.07 10.64 9.97 10.72 9.81C10.8 9.65 10.76 9.51 10.7 9.39C10.64 9.27 10.18 8.14 9.98 7.67C9.79 7.21 9.6 7.27 9.45 7.26C9.31 7.25 9.15 7.33 9.11 7.33Z"/>
+          </svg>
+          <span>Order</span>
+        </a>
+        <a class="nav-call-btn" href="tel:8547317272">📞 Call</a>
+        <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-head">
+      <div class="brand">Palazhi <span>Bakery</span></div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#specialties">Specialties</a></li>
+      <li><a href="#menu">Our Menu</a></li>
+      <li><a href="#gallery">Kerala Delicacies</a></li>
+      <li><a href="#location">Find Us</a></li>
+    </ul>
+    <div class="drawer-contact">
+      <p class="drawer-hours">🕒 Daily: 7:00 AM – 9:00 PM</p>
+      <a href="tel:8547317272" class="btn btn-solid full-width">📞 Call 85473 17272</a>
+      <a href="https://wa.me/918547317272" target="_blank" rel="noopener" class="btn btn-wa full-width">WhatsApp Order</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-glow-blob blob-1"></div>
+      <div class="hero-glow-blob blob-2"></div>
+      
+      <div class="wrap hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="sparkle">✨</span>
+            <span class="badge-text">Freshly Baked Every Morning · Cherthala</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Baked Warm &amp; Slow, <br>
+            <span class="text-gradient">By The Backwaters.</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Crispy golden puffs, oven-baked tea cakes, melt-in-mouth butter cookies, and authentic Kerala snacks. Made every morning with pure ingredients, authentic spices, and zero shortcuts.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary pulse-btn">
+              <span>Explore Today's Menu</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <button class="btn btn-secondary open-order-modal" data-item="General Order">
+              <span>Quick Order Enquiry</span>
+            </button>
+          </div>
+
+          <!-- Hero Highlights / Stats -->
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="stat-icon">🔥</span>
+              <div class="stat-info">
+                <strong>Piping Hot</strong>
+                <span>Fresh Batches Daily</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">🧈</span>
+              <div class="stat-info">
+                <strong>100% Traditional</strong>
+                <span>Pure Butter &amp; Spices</span>
+              </div>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-icon">⭐</span>
+              <div class="stat-info">
+                <strong>4.9 / 5.0</strong>
+                <span>Cherthala's Pride</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Interactive Frame -->
+        <div class="hero-visual">
+          <div class="hero-card-tilt" id="hero-tilt-card">
+            <div class="hero-image-wrapper">
+              <img src="images/sweets.jpg" alt="Fresh artisan bakes and sweet cakes at Palazhi Bakery" class="hero-main-img" id="hero-img">
+              <div class="img-overlay-vignette"></div>
+            </div>
+
+            <!-- Floating Micro Badges -->
+            <div class="float-badge badge-oven">
+              <div class="badge-icon-wrap">🔥</div>
+              <div>
+                <span class="badge-title">Oven Fresh Daily</span>
+                <span class="badge-sub">Breads, Puffs &amp; Sweets</span>
+              </div>
+            </div>
+
+            <div class="float-badge badge-tea">
+              <div class="badge-icon-wrap">☕</div>
+              <div>
+                <span class="badge-title">Evening Chaaya</span>
+                <span class="badge-sub">4:00 PM Hot Snack Rush</span>
+              </div>
+            </div>
+
+            <div class="badge-rating-ring">
+              <span class="ring-num">100%</span>
+              <span class="ring-lbl">Fresh &amp; Pure</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Wave Transition -->
+      <div class="wave-divider">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M0,32L48,42.7C96,53,192,75,288,80C384,85,480,75,576,64C672,53,768,43,864,48C960,53,1056,75,1152,80C1248,85,1344,75,1392,69.3L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Infinite Marquee Ticker -->
+    <div class="marquee-wrapper" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span>✦ FRESHLY BAKED AT 7 AM</span>
+          <span>✦ GOLDEN FLAKY KERALA PUFFS</span>
+          <span>✦ CRISPY EVENING SAMOSAS</span>
+          <span>✦ PURE BUTTER COOKIES</span>
+          <span>✦ STEAMING HOT MALABAR CHAI</span>
+          <span>✦ TRADITIONAL PUTTU &amp; DOSA</span>
+          <span>✦ HANDMADE CELEBRATION HAMPERS</span>
+          <span>✦ THIRUNELLOOR, CHERTHALA</span>
+        </div>
+        <div class="marquee-content">
+          <span>✦ FRESHLY BAKED AT 7 AM</span>
+          <span>✦ GOLDEN FLAKY KERALA PUFFS</span>
+          <span>✦ CRISPY EVENING SAMOSAS</span>
+          <span>✦ PURE BUTTER COOKIES</span>
+          <span>✦ STEAMING HOT MALABAR CHAI</span>
+          <span>✦ TRADITIONAL PUTTU &amp; DOSA</span>
+          <span>✦ HANDMADE CELEBRATION HAMPERS</span>
+          <span>✦ THIRUNELLOOR, CHERTHALA</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bakery Features / Specialties -->
+    <section class="specialties" id="specialties">
+      <div class="wrap">
+        <div class="section-header text-center">
+          <span class="section-tag">പാലാഴിയുടെ പ്രത്യേകതകൾ</span>
+          <h2 class="section-title">Crafted with Tradition, Served with Warmth</h2>
+          <p class="section-desc">Why families and travelers along Cherthala stop by Palazhi Bakery every single day.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🥖</div>
+            <h3>Fresh Batches Every Morning</h3>
+            <p>Our ovens turn on at the crack of dawn so your morning bread, teatime puffs, and warm tea cakes are made fresh on the day you eat them.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌿</div>
+            <h3>Authentic Kerala Flavours</h3>
+            <p>From crushed black pepper and fragrant cardamom in our chai to traditional coconut and roasted spices in our snacks — real local taste.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎁</div>
+            <h3>Custom Hampers &amp; Treats</h3>
+            <p>Celebrating a birthday, family feast, or special gathering? We curate delightful gift chocolate trays, celebratory cakes, and snack boxes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section with Interactive Filter -->
+    <section class="menu-section" id="menu">
+      <div class="wrap">
+        <div class="menu-header-flex">
+          <div>
+            <span class="section-tag">അപ്പം മുതൽ കേക്ക് വരെ</span>
+            <h2 class="section-title">What's on the Tray Today</h2>
+            <p class="section-desc">Handcrafted daily snacks and sweets prepared in our bakery kitchen.</p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="category-tabs" role="tablist">
+            <button class="cat-pill active" data-filter="all" role="tab" aria-selected="true">All Items</button>
+            <button class="cat-pill" data-filter="snacks" role="tab" aria-selected="false">Hot Snacks</button>
+            <button class="cat-pill" data-filter="bakes" role="tab" aria-selected="false">Bakes &amp; Biscuits</button>
+            <button class="cat-pill" data-filter="chai" role="tab" aria-selected="false">Tea &amp; Breakfast</button>
+            <button class="cat-pill" data-filter="sweets" role="tab" aria-selected="false">Gifts &amp; Sweets</button>
+          </div>
+        </div>
+
+        <!-- Menu Grid: Strictly using real available images -->
+        <div class="menu-grid" id="menu-grid">
+          
+          <!-- Card 1: Puffs -->
+          <article class="menu-card" data-category="snacks">
+            <div class="card-img-wrap">
+              <img src="images/Puffs.jpg" alt="Kerala Golden Puffs at Palazhi Bakery" loading="lazy">
+              <span class="item-tag tag-hot">🔥 Hot Seller</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Kerala Golden Puffs</h3>
+                <span class="card-price">₹20</span>
+              </div>
+              <p class="card-desc">Multi-layered flaky golden crust wrapped around freshly spiced onion and egg/veg masala stuffing.</p>
+              <div class="card-footer">
+                <span class="prep-tag">🕒 Baked 11 AM &amp; 3:30 PM</span>
+                <button class="card-order-btn open-order-modal" data-item="Kerala Golden Puffs" data-price="₹20">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Samosa -->
+          <article class="menu-card" data-category="snacks">
+            <div class="card-img-wrap">
+              <img src="images/samosa.jpg" alt="Crispy Kerala Bakery Samosas" loading="lazy">
+              <span class="item-tag tag-crisp">Crisp &amp; Savoury</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Backwater Crispy Samosas</h3>
+                <span class="card-price">₹15</span>
+              </div>
+              <p class="card-desc">Crunchy golden triangles stuffed with seasoned potatoes, green peas, and Kerala roasted aromatics.</p>
+              <div class="card-footer">
+                <span class="prep-tag">🕒 Best with Evening Chaaya</span>
+                <button class="card-order-btn open-order-modal" data-item="Backwater Crispy Samosas" data-price="₹15">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Biscuits -->
+          <article class="menu-card" data-category="bakes">
+            <div class="card-img-wrap">
+              <img src="images/biscuits.jpg" alt="Handmade Golden Butter Biscuits" loading="lazy">
+              <span class="item-tag tag-bake">Oven Fresh</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Handmade Butter Biscuits</h3>
+                <span class="card-price">₹140<small>/box</small></span>
+              </div>
+              <p class="card-desc">Melt-in-mouth bakery cookies kneaded with pure farm butter and subtle vanilla. A timeless tea dip companion.</p>
+              <div class="card-footer">
+                <span class="prep-tag">⭐ Local Customer Favourite</span>
+                <button class="card-order-btn open-order-modal" data-item="Handmade Butter Biscuits" data-price="₹140/box">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: Sweets / Assorted Bakes -->
+          <article class="menu-card" data-category="bakes">
+            <div class="card-img-wrap">
+              <img src="images/sweets.jpg" alt="Artisan Bakes and Sweet Cakes Collection" loading="lazy">
+              <span class="item-tag tag-chef">Chef's Choice</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Artisan Bakes &amp; Tea Treats</h3>
+                <span class="card-price">₹220<small> onwards</small></span>
+              </div>
+              <p class="card-desc">A mouth-watering spread of moist fruit tea cakes, glazed cinnamon rolls, sweet loaves, and dessert bites.</p>
+              <div class="card-footer">
+                <span class="prep-tag">🧁 Custom Party Orders</span>
+                <button class="card-order-btn open-order-modal" data-item="Artisan Bakes & Tea Treats" data-price="₹220 onwards">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Kerala Chai -->
+          <article class="menu-card" data-category="chai">
+            <div class="card-img-wrap">
+              <img src="images/chai.jpg" alt="Steaming Malabar Cutting Chai" loading="lazy">
+              <span class="item-tag tag-tea">☕ Steaming Hot</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Malabar Cutting Chaaya</h3>
+                <span class="card-price">₹15</span>
+              </div>
+              <p class="card-desc">Strong hand-pulled tea brewed with fresh milk, crushed ginger, and crushed green cardamom. Poured frothy and hot.</p>
+              <div class="card-footer">
+                <span class="prep-tag">🕒 Available 7 AM – 9 PM</span>
+                <button class="card-order-btn open-order-modal" data-item="Malabar Cutting Chaaya" data-price="₹15">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Chocolate Hamper -->
+          <article class="menu-card" data-category="sweets">
+            <div class="card-img-wrap">
+              <img src="images/Chocolate.jpg" alt="Celebration Chocolate Basket Hamper" loading="lazy">
+              <span class="item-tag tag-gift">🎁 Gift Hamper</span>
+            </div>
+            <div class="card-content">
+              <div class="card-header-row">
+                <h3 class="card-title">Celebration Chocolate Hamper</h3>
+                <span class="card-price">₹250<small> onwards</small></span>
+              </div>
+              <p class="card-desc">Beautifully woven gift basket decorated with assorted chocolates and confections. Perfect for birthdays and family visits.</p>
+              <div class="card-footer">
+                <span class="prep-tag">🎀 Gift Ribboned</span>
+                <button class="card-order-btn open-order-modal" data-item="Celebration Chocolate Hamper" data-price="₹250 onwards">
+                  <span>Order</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Traditional Kerala Delicacies (Modern Animated Slider) -->
+    <section class="gallery-section" id="gallery">
+      <div class="wrap">
+        <div class="gallery-head-wrap text-center">
+          <span class="section-tag light">രുചിയുടെ കാഴ്ചകൾ</span>
+          <h2 class="section-title light">Authentic Kerala on a Plate</h2>
+          <p class="section-desc light">
+            Beyond our oven trays, experience the traditional culinary heritage of God's Own Country.
+          </p>
+        </div>
+
+        <!-- Modern Touch Slider Container -->
+        <div class="slider-viewport" id="slider-viewport">
+          <div class="slider-track" id="slider-track">
+            
+            <!-- Slide 1: Puttu -->
+            <div class="slider-item">
+              <div class="slide-inner">
+                <div class="slide-media">
+                  <img src="images/puttu.jpg" alt="Traditional Puttu with Kadala Curry and Banana" loading="lazy">
+                </div>
+                <div class="slide-info">
+                  <span class="slide-subtag">Kerala Breakfast Classic</span>
+                  <h3>Puttu &amp; Kadala Curry</h3>
+                  <p>Steamed cylindrical rice flour cakes layered with freshly scraped coconut, paired with rich black chickpea curry and sweet Kerala bananas.</p>
+                  <div class="slide-meta">
+                    <span class="pill-badge">🥥 Fresh Grated Coconut</span>
+                    <span class="pill-badge">🌾 Rice &amp; Spices</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Dosa -->
+            <div class="slider-item">
+              <div class="slide-inner">
+                <div class="slide-media">
+                  <img src="images/Dosa.jpg" alt="Crispy Masala Dosa with Sambar and Chutney" loading="lazy">
+                </div>
+                <div class="slide-info">
+                  <span class="slide-subtag">Golden Tiffin Favourite</span>
+                  <h3>Crispy Ghee Roast Dosa</h3>
+                  <p>Paper-crisp golden crepe made from naturally fermented rice and lentil batter, served alongside steaming vegetable sambar and fresh coconut chutney.</p>
+                  <div class="slide-meta">
+                    <span class="pill-badge">🧈 Pure Desi Ghee</span>
+                    <span class="pill-badge">🥣 Sambar &amp; Chutney</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Sadhya -->
+            <div class="slider-item">
+              <div class="slide-inner">
+                <div class="slide-media">
+                  <img src="images/sadhya.jpg" alt="Grand Traditional Kerala Sadhya Feast on Banana Leaf" loading="lazy">
+                </div>
+                <div class="slide-info">
+                  <span class="slide-subtag">Celebration Feast</span>
+                  <h3>Traditional Kerala Sadhya</h3>
+                  <p>A royal multi-course vegetarian banquet served on fresh plantain leaf with red matta rice, avial, thoran, sambar, crispy papadum, and rich payasam.</p>
+                  <div class="slide-meta">
+                    <span class="pill-badge">🍃 Plantain Leaf</span>
+                    <span class="pill-badge">🍲 20+ Traditional Curries</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Chai -->
+            <div class="slider-item">
+              <div class="slide-inner">
+                <div class="slide-media">
+                  <img src="images/chai.jpg" alt="Kerala Evening Kadum Chai and Snacks" loading="lazy">
+                </div>
+                <div class="slide-info">
+                  <span class="slide-subtag">Heart of Every Evening</span>
+                  <h3>Kadum Chaaya &amp; Evening Chitchat</h3>
+                  <p>The timeless ritual of Thirunelloor evenings — a piping glass of spiced cutting tea enjoyed with hot flaky snacks fresh out of our frying pans.</p>
+                  <div class="slide-meta">
+                    <span class="pill-badge">☕ Malabar Cardamom Tea</span>
+                    <span class="pill-badge">💛 Backwater Conversations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Slider Controls -->
+          <button class="slider-btn prev-btn" id="slider-prev" aria-label="Previous Slide">‹</button>
+          <button class="slider-btn next-btn" id="slider-next" aria-label="Next Slide">›</button>
+
+          <!-- Slider Progress & Dots -->
+          <div class="slider-ui-bottom">
+            <div class="slider-dots" id="slider-dots"></div>
+            <div class="slider-progress-bar">
+              <div class="slider-progress-fill" id="slider-progress-fill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit & Location Section -->
+    <section class="location-section" id="location">
+      <div class="wrap">
+        <div class="loc-grid">
+          
+          <div class="loc-details">
+            <span class="section-tag">ഞങ്ങളെ കണ്ടെത്തൂ</span>
+            <h2 class="section-title">Visit Palazhi Bakery</h2>
+            <p class="section-desc">Drop by for morning tea and bread or an evening snack run with family.</p>
+
+            <div class="info-cards-stack">
+              <div class="info-card">
+                <div class="info-icon">📍</div>
+                <div>
+                  <strong>Our Address</strong>
+                  <p>Palazhi Bakery, Thirunelloor, Cherthala, Alappuzha District, Kerala — 688524</p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">🕒</div>
+                <div>
+                  <strong>Bakery Timings</strong>
+                  <p>Open All 7 Days: <span class="highlight-text">7:00 AM – 9:00 PM</span></p>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">📞</div>
+                <div>
+                  <strong>Phone &amp; Orders</strong>
+                  <p><a href="tel:8547317272" class="loc-link">+91 85473 17272</a> (Direct Call / WhatsApp)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="loc-action-row">
+              <a href="https://maps.google.com/?q=Thirunelloor,+Cherthala,+Alappuzha,+Kerala" target="_blank" rel="noopener" class="btn btn-primary">
+                <span>Open in Google Maps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://wa.me/918547317272" target="_blank" rel="noopener" class="btn btn-wa">
+                <span>WhatsApp Us</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="loc-map-wrapper">
+            <div class="map-inner-frame">
+              <iframe 
+                title="Palazhi Bakery Location Map"
+                loading="lazy" 
+                src="https://www.google.com/maps?q=Thirunelloor,+Cherthala,+Alappuzha,+Kerala&output=embed"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Polished Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand-col">
+        <div class="brand">Palazhi <span class="brand-highlight">Bakery</span></div>
+        <p class="footer-malayalam">പാലാഴി ബേക്കറി, തിരുനെല്ലൂർ, ചേർത്തല</p>
+        <p class="footer-tagline">Warm artisan bakes and authentic traditional Kerala savouries, made everyday with care.</p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#specialties">Specialties</a></li>
+          <li><a href="#menu">Daily Menu</a></li>
+          <li><a href="#gallery">Kerala Delicacies</a></li>
+          <li><a href="#location">Find Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h4>Order &amp; Connect</h4>
+        <p>📞 <a href="tel:8547317272">+91 85473 17272</a></p>
+        <p>💬 <a href="https://wa.me/918547317272" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+        <p>🕒 Open Daily 7:00 AM – 9:00 PM</p>
+        <p class="footer-credit">© Palazhi Bakery, Cherthala. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Quick Order Modal -->
+  <div class="modal-overlay" id="order-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close dialog">&times;</button>
+      <div class="modal-head">
+        <span class="modal-badge">💬 Palazhi Direct Order</span>
+        <h3 id="modal-item-name">Order via WhatsApp</h3>
+        <p id="modal-item-sub">Select your quantity and message us directly on WhatsApp for pickup or delivery enquiry.</p>
+      </div>
+
+      <form id="order-form" class="modal-body" onsubmit="return false;">
+        <input type="hidden" id="order-input-item" value="">
+
+        <div class="form-group">
+          <label for="order-qty">Quantity / Portions</label>
+          <div class="qty-stepper">
+            <button type="button" class="stepper-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+            <input type="number" id="order-qty" value="1" min="1" max="100" readonly>
+            <button type="button" class="stepper-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-note">Special Instructions or Notes (Optional)</label>
+          <textarea id="order-note" placeholder="E.g., Pack warm for 5:00 PM pickup, egg puffs, spice level, etc." rows="2"></textarea>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn btn-wa full-width" id="confirm-wa-order">
+            <span>Send Order via WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.33C8.95 7.33 8.7 7.39 8.5 7.61C8.28 7.85 7.67 8.42 7.67 9.58C7.67 10.74 8.52 11.86 8.64 12.02C8.76 12.18 10.3 14.54 12.66 15.56C14.62 16.41 15.02 16.24 15.45 16.2C15.88 16.16 16.84 15.63 17.04 15.07C17.24 14.51 17.24 14.03 17.18 13.93C17.12 13.83 16.96 13.77 16.72 13.65C16.48 13.53 15.3 12.95 15.08 12.87C14.86 12.79 14.7 12.75 14.54 12.99C14.38 13.23 13.92 13.77 13.78 13.93C13.64 14.09 13.5 14.11 13.26 13.99C13.02 13.87 12.25 13.62 11.33 12.8C10.62 12.16 10.14 11.37 10 11.13C9.86 10.89 9.99 10.76 10.11 10.64C10.22 10.53 10.36 10.35 10.48 10.21C10.6 10.07 10.64 9.97 10.72 9.81C10.8 9.65 10.76 9.51 10.7 9.39C10.64 9.27 10.18 8.14 9.98 7.67C9.79 7.21 9.6 7.27 9.45 7.26C9.31 7.25 9.15 7.33 9.11 7.33Z"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Sticky Action Buttons -->
+  <div class="floating-actions" id="floating-actions">
+    <a href="https://wa.me/918547317272" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp Us">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.9C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.33C8.95 7.33 8.7 7.39 8.5 7.61C8.28 7.85 7.67 8.42 7.67 9.58C7.67 10.74 8.52 11.86 8.64 12.02C8.76 12.18 10.3 14.54 12.66 15.56C14.62 16.41 15.02 16.24 15.45 16.2C15.88 16.16 16.84 15.63 17.04 15.07C17.24 14.51 17.24 14.03 17.18 13.93C17.12 13.83 16.96 13.77 16.72 13.65C16.48 13.53 15.3 12.95 15.08 12.87C14.86 12.79 14.7 12.75 14.54 12.99C14.38 13.23 13.92 13.77 13.78 13.93C13.64 14.09 13.5 14.11 13.26 13.99C13.02 13.87 12.25 13.62 11.33 12.8C10.62 12.16 10.14 11.37 10 11.13C9.86 10.89 9.99 10.76 10.11 10.64C10.22 10.53 10.36 10.35 10.48 10.21C10.6 10.07 10.64 9.97 10.72 9.81C10.8 9.65 10.76 9.51 10.7 9.39C10.64 9.27 10.18 8.14 9.98 7.67C9.79 7.21 9.6 7.27 9.45 7.26C9.31 7.25 9.15 7.33 9.11 7.33Z"/>
+      </svg>
+    </a>
+    <button class="float-btn float-top" id="back-to-top" aria-label="Back to Top">
+      <svg class="progress-ring" width="44" height="44">
+        <circle class="progress-ring-circle" id="progress-circle" stroke-width="3" fill="transparent" r="18" cx="22" cy="22"/>
+      </svg>
+      <span class="arrow-up">↑</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
